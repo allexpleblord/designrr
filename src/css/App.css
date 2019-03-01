@@ -1,0 +1,89 @@
+/* General App styles */
+.App {
+  text-align: center;
+}
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('../assets/background.png') no-repeat;
+  background-position: center;
+}
+.App-title {
+  font-size: calc(10px + 5.7vmin);
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  max-width: 600px;
+  margin: 10px;
+}
+.App-subtitle {
+  font-size: calc(10px + 2vmin);
+  font-weight: 300;
+  margin: 10px;
+}
+.App-button {
+  cursor: pointer;
+  margin: 20px;
+  font-size: calc(10px + 1.4vmin);
+  padding: 15px 25px;
+  background: #0077ff;
+  color: white;
+  outline: none;
+  border: none;
+  transition: 200ms;
+}
+.App-button:hover {
+  background: #0765d1;
+}
+.App-button:active {
+  transform: scale(0.9);
+}
+
+/* Options */
+.options {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.options p {
+  cursor: pointer;
+  margin: 10px 20px;
+  font-size: calc(10px + 1.4vmin);
+}
+.options-underline {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  height: 2px;
+  margin-left: 20px;
+  width: 1000px;
+  background: #0066ff;
+  transition: 250ms;
+}
+
+/* The brief */
+.App-brief {
+  min-height: 180px;
+  max-width: 600px;
+}
+.brief-text {
+  margin: 10px;
+  font-size: calc(10px + 2.5vmin);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: left;
+}
+
+/* Media queries */
+@media screen and (max-width: 960px) {
+  .App-header {
+    background-position-y: 55%;
+  }
+  .App-button {
+    padding: 10px 20px;
+  }
+}
