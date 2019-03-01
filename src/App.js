@@ -4,7 +4,7 @@ import './css/App.css';
 
 class App extends Component {
   state = {
-    brief: 'Design a landing page for a Discord bot.',
+    brief: '',
     category: 'any'
   }
 
@@ -12,6 +12,7 @@ class App extends Component {
     // Wait incase the elements haven't rendered yet ( yes it happens )
     setTimeout(() => {
       this.category('any');
+      this.getBrief();
     }, 100);
   }
 
@@ -52,11 +53,11 @@ class App extends Component {
       .then(res => {
         let brief = res.data.brief
         // Call itself when the returned brief isn't a new one
-        if (brief === this.state.brief) this.getBrief()
+        if (brief === this.state.brief) this.getBrief();
         this.setState({
           brief: brief
-        })
-      })
+        });
+      });
   }
 
   render() {
